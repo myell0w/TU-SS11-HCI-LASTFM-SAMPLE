@@ -11,6 +11,7 @@
 #import "LFMEvent.h"
 #import "PSDefines.h"
 #import "LFMTableViewCell.h"
+#import "LFMDetailViewController.h"
 
 
 #define kImageViewTag   1234
@@ -122,7 +123,10 @@
 ////////////////////////////////////////////////////////////////////////
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    LFMDetailViewController *detailViewController = [[[LFMDetailViewController alloc] initWithStyle:UITableViewStyleGrouped] autorelease];
     
+    detailViewController.event = [self.events objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 @end

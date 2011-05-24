@@ -49,6 +49,23 @@
 
 ////////////////////////////////////////////////////////////////////////
 #pragma mark -
+#pragma mark MKAnnotation
+////////////////////////////////////////////////////////////////////////
+
+- (NSString *)subtitle {
+    return [self.startDate description];
+}
+
+- (CLLocationCoordinate2D)coordinate {
+    NSDictionary *location = self.location;
+    double latitude = [[[location valueForKey:@"geo:point"] valueForKey:@"geo:lat"] doubleValue];
+    double longitude = [[[location valueForKey:@"geo:point"] valueForKey:@"geo:long"] doubleValue];
+    
+    return CLLocationCoordinate2DMake(latitude, longitude);
+}
+
+////////////////////////////////////////////////////////////////////////
+#pragma mark -
 #pragma mark Getter
 ////////////////////////////////////////////////////////////////////////
 
@@ -81,7 +98,7 @@
 }
 
 - (NSDictionary *)location {
-    return [self.data objectForKey:@"location"];
+    return [[self.data objectForKey:@"venue"] objectForKey:@"location"];
 }
 
 @end

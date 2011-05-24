@@ -16,6 +16,9 @@
 		392A97C0138BAA7800B51923 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 392A97A4138BAA7800B51923 /* UIImageView+WebCache.m */; };
 		392A97C3138BAB3900B51923 /* lastfm.png in Resources */ = {isa = PBXBuildFile; fileRef = 392A97C2138BAB3900B51923 /* lastfm.png */; };
 		392A97C6138BAF7A00B51923 /* LFMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 392A97C5138BAF7A00B51923 /* LFMTableViewCell.m */; };
+		392A97D1138BB38600B51923 /* LFMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 392A97D0138BB38600B51923 /* LFMDetailViewController.m */; };
+		392A97D3138BB3A900B51923 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392A97D2138BB3A900B51923 /* MapKit.framework */; };
+		392A97D5138BB73400B51923 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 392A97D4138BB73400B51923 /* CoreLocation.framework */; };
 		3944909C138B90590038653A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3944909B138B90590038653A /* UIKit.framework */; };
 		3944909E138B90590038653A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3944909D138B90590038653A /* Foundation.framework */; };
 		394490A0138B90590038653A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3944909F138B90590038653A /* CoreGraphics.framework */; };
@@ -107,6 +110,10 @@
 		392A97C2138BAB3900B51923 /* lastfm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lastfm.png; sourceTree = "<group>"; };
 		392A97C4138BAF7A00B51923 /* LFMTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFMTableViewCell.h; sourceTree = "<group>"; };
 		392A97C5138BAF7A00B51923 /* LFMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFMTableViewCell.m; sourceTree = "<group>"; };
+		392A97CF138BB38600B51923 /* LFMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFMDetailViewController.h; sourceTree = "<group>"; };
+		392A97D0138BB38600B51923 /* LFMDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFMDetailViewController.m; sourceTree = "<group>"; };
+		392A97D2138BB3A900B51923 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		392A97D4138BB73400B51923 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		39449097138B90590038653A /* LastFM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LastFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3944909B138B90590038653A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3944909D138B90590038653A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -159,6 +166,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				392A97D5138BB73400B51923 /* CoreLocation.framework in Frameworks */,
+				392A97D3138BB3A900B51923 /* MapKit.framework in Frameworks */,
 				39449123138B93120038653A /* libz.1.2.3.dylib in Frameworks */,
 				394490A0138B90590038653A /* CoreGraphics.framework in Frameworks */,
 				39449120138B92FD0038653A /* MobileCoreServices.framework in Frameworks */,
@@ -234,6 +243,8 @@
 		3944908C138B90590038653A = {
 			isa = PBXGroup;
 			children = (
+				392A97D4138BB73400B51923 /* CoreLocation.framework */,
+				392A97D2138BB3A900B51923 /* MapKit.framework */,
 				394490A1138B90590038653A /* Last */,
 				392A97C1138BAB2800B51923 /* Resources */,
 				3944909A138B90590038653A /* Frameworks */,
@@ -342,6 +353,8 @@
 			children = (
 				39449126138B94370038653A /* LFMTableViewController.h */,
 				39449127138B94370038653A /* LFMTableViewController.m */,
+				392A97CF138BB38600B51923 /* LFMDetailViewController.h */,
+				392A97D0138BB38600B51923 /* LFMDetailViewController.m */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -484,6 +497,7 @@
 				392A97BF138BAA7800B51923 /* SDWebImageManager.m in Sources */,
 				392A97C0138BAA7800B51923 /* UIImageView+WebCache.m in Sources */,
 				392A97C6138BAF7A00B51923 /* LFMTableViewCell.m in Sources */,
+				392A97D1138BB38600B51923 /* LFMDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
