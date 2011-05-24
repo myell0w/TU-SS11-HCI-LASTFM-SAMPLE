@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3944909C138B90590038653A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3944909B138B90590038653A /* UIKit.framework */; };
+		3944909E138B90590038653A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3944909D138B90590038653A /* Foundation.framework */; };
+		394490A0138B90590038653A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3944909F138B90590038653A /* CoreGraphics.framework */; };
+		394490A6138B90590038653A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 394490A4138B90590038653A /* InfoPlist.strings */; };
+		394490A9138B90590038653A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 394490A8138B90590038653A /* main.m */; };
+		394490AC138B90590038653A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 394490AB138B90590038653A /* AppDelegate.m */; };
+		394490AF138B90590038653A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 394490AD138B90590038653A /* MainWindow.xib */; };
+		394490CD138B90DA0038653A /* libPSFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 394490CC138B90DA0038653A /* libPSFoundation.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		394490C0138B90BA0038653A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 394490B5138B90B90038653A /* PSFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 788E1F38126C95B1009801E5;
+			remoteInfo = PSFoundation;
+		};
+		394490C2138B90BA0038653A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 394490B5138B90B90038653A /* PSFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7867A4E5126C98C70012E520;
+			remoteInfo = PSFoundation_CoreData;
+		};
+		394490C4138B90BA0038653A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 394490B5138B90B90038653A /* PSFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 390BAB2712C9438B00C39661;
+			remoteInfo = PSFoundation_CoreLocation;
+		};
+		394490C6138B90BA0038653A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 394490B5138B90B90038653A /* PSFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 78858895133B39E700797FF0;
+			remoteInfo = "PSFoundation-OSX";
+		};
+		394490C8138B90BA0038653A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 394490B5138B90B90038653A /* PSFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 788588B7133B39F000797FF0;
+			remoteInfo = "PSFoundation_CoreData-OSX";
+		};
+		394490CA138B90D00038653A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 394490B5138B90B90038653A /* PSFoundation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 788E1E6D126C95B1009801E5;
+			remoteInfo = PSFoundation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		39449097138B90590038653A /* Last.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Last.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3944909B138B90590038653A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3944909D138B90590038653A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3944909F138B90590038653A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		394490A3138B90590038653A /* Last-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Last-Info.plist"; sourceTree = "<group>"; };
+		394490A5138B90590038653A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		394490A7138B90590038653A /* Last-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Last-Prefix.pch"; sourceTree = "<group>"; };
+		394490A8138B90590038653A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		394490AA138B90590038653A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		394490AB138B90590038653A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		394490AE138B90590038653A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		394490B5138B90B90038653A /* PSFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PSFoundation.xcodeproj; path = ../PSFoundation/PSFoundation.xcodeproj; sourceTree = "<group>"; };
+		394490CC138B90DA0038653A /* libPSFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libPSFoundation.a; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		39449094138B90590038653A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				394490CD138B90DA0038653A /* libPSFoundation.a in Frameworks */,
+				3944909C138B90590038653A /* UIKit.framework in Frameworks */,
+				3944909E138B90590038653A /* Foundation.framework in Frameworks */,
+				394490A0138B90590038653A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3944908C138B90590038653A = {
+			isa = PBXGroup;
+			children = (
+				394490A1138B90590038653A /* Last */,
+				3944909A138B90590038653A /* Frameworks */,
+				39449098138B90590038653A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		39449098138B90590038653A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				39449097138B90590038653A /* Last.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3944909A138B90590038653A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				394490CC138B90DA0038653A /* libPSFoundation.a */,
+				394490B5138B90B90038653A /* PSFoundation.xcodeproj */,
+				3944909B138B90590038653A /* UIKit.framework */,
+				3944909D138B90590038653A /* Foundation.framework */,
+				3944909F138B90590038653A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		394490A1138B90590038653A /* Last */ = {
+			isa = PBXGroup;
+			children = (
+				394490AA138B90590038653A /* AppDelegate.h */,
+				394490AB138B90590038653A /* AppDelegate.m */,
+				394490AD138B90590038653A /* MainWindow.xib */,
+				394490A2138B90590038653A /* Supporting Files */,
+			);
+			path = Last;
+			sourceTree = "<group>";
+		};
+		394490A2138B90590038653A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				394490A3138B90590038653A /* Last-Info.plist */,
+				394490A4138B90590038653A /* InfoPlist.strings */,
+				394490A7138B90590038653A /* Last-Prefix.pch */,
+				394490A8138B90590038653A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		394490B6138B90B90038653A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				394490C1138B90BA0038653A /* libPSFoundation.a */,
+				394490C3138B90BA0038653A /* libPSFoundation_CoreData.a */,
+				394490C5138B90BA0038653A /* libPSFoundation_CoreLocation.a */,
+				394490C7138B90BA0038653A /* libPSFoundation-OSX.a */,
+				394490C9138B90BA0038653A /* libPSFoundation_CoreData-OSX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		39449096138B90590038653A /* Last */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 394490B2138B90590038653A /* Build configuration list for PBXNativeTarget "Last" */;
+			buildPhases = (
+				39449093138B90590038653A /* Sources */,
+				39449094138B90590038653A /* Frameworks */,
+				39449095138B90590038653A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				394490CB138B90D00038653A /* PBXTargetDependency */,
+			);
+			name = Last;
+			productName = Last;
+			productReference = 39449097138B90590038653A /* Last.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3944908E138B90590038653A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "NOUS Wissensmanagement GmbH";
+			};
+			buildConfigurationList = 39449091138B90590038653A /* Build configuration list for PBXProject "Last" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3944908C138B90590038653A;
+			productRefGroup = 39449098138B90590038653A /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 394490B6138B90B90038653A /* Products */;
+					ProjectRef = 394490B5138B90B90038653A /* PSFoundation.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				39449096138B90590038653A /* Last */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		394490C1138B90BA0038653A /* libPSFoundation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libPSFoundation.a;
+			remoteRef = 394490C0138B90BA0038653A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		394490C3138B90BA0038653A /* libPSFoundation_CoreData.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libPSFoundation_CoreData.a;
+			remoteRef = 394490C2138B90BA0038653A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		394490C5138B90BA0038653A /* libPSFoundation_CoreLocation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libPSFoundation_CoreLocation.a;
+			remoteRef = 394490C4138B90BA0038653A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		394490C7138B90BA0038653A /* libPSFoundation-OSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPSFoundation-OSX.a";
+			remoteRef = 394490C6138B90BA0038653A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		394490C9138B90BA0038653A /* libPSFoundation_CoreData-OSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPSFoundation_CoreData-OSX.a";
+			remoteRef = 394490C8138B90BA0038653A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		39449095138B90590038653A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				394490A6138B90590038653A /* InfoPlist.strings in Resources */,
+				394490AF138B90590038653A /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		39449093138B90590038653A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				394490A9138B90590038653A /* main.m in Sources */,
+				394490AC138B90590038653A /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		394490CB138B90D00038653A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PSFoundation;
+			targetProxy = 394490CA138B90D00038653A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		394490A4138B90590038653A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				394490A5138B90590038653A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		394490AD138B90590038653A /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				394490AE138B90590038653A /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		394490B0138B90590038653A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../PSFoundation/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		394490B1138B90590038653A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../PSFoundation/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		394490B3138B90590038653A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Last/Last-Prefix.pch";
+				INFOPLIST_FILE = "Last/Last-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		394490B4138B90590038653A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Last/Last-Prefix.pch";
+				INFOPLIST_FILE = "Last/Last-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		39449091138B90590038653A /* Build configuration list for PBXProject "Last" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				394490B0138B90590038653A /* Debug */,
+				394490B1138B90590038653A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		394490B2138B90590038653A /* Build configuration list for PBXNativeTarget "Last" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				394490B3138B90590038653A /* Debug */,
+				394490B4138B90590038653A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3944908E138B90590038653A /* Project object */;
+}
