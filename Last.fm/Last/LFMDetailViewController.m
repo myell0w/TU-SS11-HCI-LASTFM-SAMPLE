@@ -44,6 +44,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     self.titleLabel = [[[UILabel alloc] initWithFrame:CGRectMake(10, 10, 210, 20)] autorelease];
     self.startDateLabel = [[[UILabel alloc] initWithFrame:CGRectMake(10, 31, 210, 20)] autorelease];
     self.imageView = [[[UIImageView alloc] initWithFrame:CGRectMake(230, 10, 80, 80)] autorelease];
@@ -105,6 +106,16 @@
 
     [self.mapView addAnnotation:self.event];
     [self.mapView setRegion:MKCoordinateRegionMake(self.event.coordinate, MKCoordinateSpanMake(0.01, 0.01)) animated:YES];
+    
+    [self.tableView reloadData];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        self.tableView.contentInset = UIEdgeInsetsMake(55, 0, 0, 0);
+    }];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

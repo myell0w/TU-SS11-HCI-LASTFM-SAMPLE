@@ -126,7 +126,10 @@
     LFMDetailViewController *detailViewController = [[[LFMDetailViewController alloc] initWithStyle:UITableViewStyleGrouped] autorelease];
     
     detailViewController.event = [self.events objectAtIndex:indexPath.row];
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    //[self.navigationController pushViewController:detailViewController animated:YES];
+    
+    detailViewController.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+    [self presentModalViewController:detailViewController animated:YES];
 }
 
 @end
