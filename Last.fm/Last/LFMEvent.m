@@ -70,7 +70,7 @@
 ////////////////////////////////////////////////////////////////////////
 
 - (NSArray *)artists {
-    return [self.data objectForKey:@"artists"];
+    return [[self.data objectForKey:@"artists"] objectForKey:@"artist"];
 }
 
 - (NSArray *)images {

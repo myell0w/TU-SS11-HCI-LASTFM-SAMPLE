@@ -47,10 +47,10 @@
     self.titleLabel = [[[UILabel alloc] initWithFrame:CGRectMake(10, 10, 210, 20)] autorelease];
     self.startDateLabel = [[[UILabel alloc] initWithFrame:CGRectMake(10, 31, 210, 20)] autorelease];
     self.imageView = [[[UIImageView alloc] initWithFrame:CGRectMake(230, 10, 80, 80)] autorelease];
-    self.mapView = [[[MKMapView alloc] initWithFrame:CGRectMake(10, 10, 300, 200)] autorelease];
+    self.mapView = [[[MKMapView alloc] initWithFrame:CGRectMake(10, 10, 300, 150)] autorelease];
     
     UIView *headerView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 100)] autorelease];
-    UIView *footerView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 220)] autorelease];
+    UIView *footerView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 170)] autorelease];
     
     [headerView addSubview:self.titleLabel];
     [headerView addSubview:self.startDateLabel];
@@ -77,7 +77,7 @@
     self.imageView.layer.borderColor = [UIColor whiteColor].CGColor;
     self.imageView.layer.borderWidth = 2.f;
     
-    self.mapView.layer.cornerRadius = 4.f;
+    self.mapView.layer.cornerRadius = 12.f;
     self.mapView.layer.borderColor = [UIColor whiteColor].CGColor;
     self.mapView.layer.borderWidth = 2.f;
     
@@ -111,6 +111,77 @@
     [super viewWillDisappear:animated];
     
     [self.mapView removeAnnotation:self.event];
+}
+
+////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark UITableViewDataSource
+////////////////////////////////////////////////////////////////////////
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    if ([self.event.artists isKindOfClass:[NSArray class]]) {
+        return 1;
+    }
+    
+    return 0;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if ([self.event.artists isKindOfClass:[NSArray class]]) {
+        return self.event.artists.count;
+    }
+    
+    return 0;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    // create the parent view that will hold header Label
+	UIView* customView = [[[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.width, 25.0)] autorelease];
+    
+	// create the button object
+    UILabel *header = [[[UILabel alloc] initWithFrame:CGRectMake(10, 0, self.view.width-10, 25.)] autorelease];
+	header.font = [UIFont boldSystemFontOfSize:18];
+    header.textColor = [UIColor whiteColor];
+    header.shadowColor = [UIColor grayColor];
+    header.shadowOffset = CGSizeMake(0.0, 1.0);
+    header.opaque = NO;
+    header.backgroundColor = [UIColor clearColor];
+    
+    header.text = [self tableView:tableView titleForHeaderInSection:section];
+	[customView addSubview:header];
+    
+    return customView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 35.0;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return @"Artists";
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+	static NSString *cellID = @"aMTTableViewCellID";
+    
+	UITableViewCell *cell = nil;
+    NSString *artist = [self.event.artists objectAtIndex:indexPath.row];
+    
+	// step 1: is there a dequeueable cell?
+	cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    
+	// step 2: no? -> create new cell
+	if (cell == nil) {
+		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID] autorelease];
+    }
+    
+	// step 3: set up cell values
+    
+    // set title
+    cell.textLabel.text = artist;
+    
+    
+    return cell;
 }
 
 ////////////////////////////////////////////////////////////////////////
