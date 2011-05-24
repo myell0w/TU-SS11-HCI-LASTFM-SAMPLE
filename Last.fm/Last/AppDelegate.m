@@ -8,17 +8,29 @@
 
 #import "AppDelegate.h"
 #import "PSFoundation.h"
+#import "LFMTableViewController.h"
 
 @implementation AppDelegate
 
 
-@synthesize window=_window;
+@synthesize window = _window;
+@synthesize rootViewController = rootViewController_;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    PSDDFormatter *psLogger = [[[PSDDFormatter alloc] init] autorelease];
+	[[DDTTYLogger sharedInstance] setLogFormatter:psLogger];
+	[DDLog addLogger:[DDTTYLogger sharedInstance]];
+    
+    self.rootViewController = [[[LFMTableViewController alloc] initWithStyle:UITableViewStylePlain] autorelease];
+    UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:self.rootViewController] autorelease];
+    
+    self.window.rootViewController = navigationController;
+    
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
 
+    DDLogInfo(@"Test");
     
     return YES;
 }

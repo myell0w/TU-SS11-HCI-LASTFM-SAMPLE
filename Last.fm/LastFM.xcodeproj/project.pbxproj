@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		392A972F138B988400B51923 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 392A9716138B988300B51923 /* JSONKit.m */; };
+		392A9730138B988400B51923 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 392A9717138B988300B51923 /* README.md */; };
 		3944909C138B90590038653A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3944909B138B90590038653A /* UIKit.framework */; };
 		3944909E138B90590038653A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3944909D138B90590038653A /* Foundation.framework */; };
 		394490A0138B90590038653A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3944909F138B90590038653A /* CoreGraphics.framework */; };
@@ -28,6 +30,8 @@
 		3944911E138B92F30038653A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3944911D138B92F30038653A /* SystemConfiguration.framework */; };
 		39449120138B92FD0038653A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3944911F138B92FD0038653A /* MobileCoreServices.framework */; };
 		39449123138B93120038653A /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 39449122138B93120038653A /* libz.1.2.3.dylib */; };
+		39449128138B94370038653A /* LFMTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39449127138B94370038653A /* LFMTableViewController.m */; };
+		3944920F138B96B60038653A /* LFMEventsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3944920E138B96B60038653A /* LFMEventsRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,13 +80,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		39449097138B90590038653A /* Last.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Last.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		392A9715138B988300B51923 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		392A9716138B988300B51923 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		392A9717138B988300B51923 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		39449097138B90590038653A /* LastFM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LastFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3944909B138B90590038653A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3944909D138B90590038653A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3944909F138B90590038653A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		394490A3138B90590038653A /* Last-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Last-Info.plist"; sourceTree = "<group>"; };
+		394490A3138B90590038653A /* LastFM-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LastFM-Info.plist"; sourceTree = "<group>"; };
 		394490A5138B90590038653A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		394490A7138B90590038653A /* Last-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Last-Prefix.pch"; sourceTree = "<group>"; };
+		394490A7138B90590038653A /* LastFM-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LastFM-Prefix.pch"; sourceTree = "<group>"; };
 		394490A8138B90590038653A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		394490AA138B90590038653A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		394490AB138B90590038653A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -116,6 +123,11 @@
 		3944911F138B92FD0038653A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		39449121138B93020038653A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		39449122138B93120038653A /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		39449124138B93C90038653A /* PSDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSDefines.h; sourceTree = "<group>"; };
+		39449126138B94370038653A /* LFMTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFMTableViewController.h; sourceTree = "<group>"; };
+		39449127138B94370038653A /* LFMTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFMTableViewController.m; sourceTree = "<group>"; };
+		3944920D138B96B60038653A /* LFMEventsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFMEventsRequest.h; sourceTree = "<group>"; };
+		3944920E138B96B60038653A /* LFMEventsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFMEventsRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +149,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		392A96EE138B988300B51923 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				392A9715138B988300B51923 /* JSONKit.h */,
+				392A9716138B988300B51923 /* JSONKit.m */,
+				392A9717138B988300B51923 /* README.md */,
+			);
+			name = JSONKit;
+			path = ../JSONKit;
+			sourceTree = "<group>";
+		};
 		3944908C138B90590038653A = {
 			isa = PBXGroup;
 			children = (
@@ -149,7 +172,7 @@
 		39449098138B90590038653A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				39449097138B90590038653A /* Last.app */,
+				39449097138B90590038653A /* LastFM.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,6 +180,7 @@
 		3944909A138B90590038653A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				392A96EE138B988300B51923 /* JSONKit */,
 				394490FB138B92210038653A /* ASIHTTPRequest */,
 				394490CC138B90DA0038653A /* libPSFoundation.a */,
 				394490B5138B90B90038653A /* PSFoundation.xcodeproj */,
@@ -175,6 +199,9 @@
 		394490A1138B90590038653A /* Last */ = {
 			isa = PBXGroup;
 			children = (
+				3944920C138B96A40038653A /* Requests */,
+				39449125138B94190038653A /* View Controller */,
+				39449124138B93C90038653A /* PSDefines.h */,
 				394490AA138B90590038653A /* AppDelegate.h */,
 				394490AB138B90590038653A /* AppDelegate.m */,
 				394490AD138B90590038653A /* MainWindow.xib */,
@@ -186,9 +213,9 @@
 		394490A2138B90590038653A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				394490A3138B90590038653A /* Last-Info.plist */,
+				394490A3138B90590038653A /* LastFM-Info.plist */,
 				394490A4138B90590038653A /* InfoPlist.strings */,
-				394490A7138B90590038653A /* Last-Prefix.pch */,
+				394490A7138B90590038653A /* LastFM-Prefix.pch */,
 				394490A8138B90590038653A /* main.m */,
 			);
 			name = "Supporting Files";
@@ -235,12 +262,30 @@
 			name = ASIHTTPRequest;
 			sourceTree = "<group>";
 		};
+		39449125138B94190038653A /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				39449126138B94370038653A /* LFMTableViewController.h */,
+				39449127138B94370038653A /* LFMTableViewController.m */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		3944920C138B96A40038653A /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				3944920D138B96B60038653A /* LFMEventsRequest.h */,
+				3944920E138B96B60038653A /* LFMEventsRequest.m */,
+			);
+			name = Requests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		39449096138B90590038653A /* Last */ = {
+		39449096138B90590038653A /* LastFM */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 394490B2138B90590038653A /* Build configuration list for PBXNativeTarget "Last" */;
+			buildConfigurationList = 394490B2138B90590038653A /* Build configuration list for PBXNativeTarget "LastFM" */;
 			buildPhases = (
 				39449093138B90590038653A /* Sources */,
 				39449094138B90590038653A /* Frameworks */,
@@ -251,9 +296,9 @@
 			dependencies = (
 				394490CB138B90D00038653A /* PBXTargetDependency */,
 			);
-			name = Last;
+			name = LastFM;
 			productName = Last;
-			productReference = 39449097138B90590038653A /* Last.app */;
+			productReference = 39449097138B90590038653A /* LastFM.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -264,7 +309,7 @@
 			attributes = {
 				ORGANIZATIONNAME = "NOUS Wissensmanagement GmbH";
 			};
-			buildConfigurationList = 39449091138B90590038653A /* Build configuration list for PBXProject "Last" */;
+			buildConfigurationList = 39449091138B90590038653A /* Build configuration list for PBXProject "LastFM" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -282,7 +327,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				39449096138B90590038653A /* Last */,
+				39449096138B90590038653A /* LastFM */,
 			);
 		};
 /* End PBXProject section */
@@ -332,6 +377,7 @@
 			files = (
 				394490A6138B90590038653A /* InfoPlist.strings in Resources */,
 				394490AF138B90590038653A /* MainWindow.xib in Resources */,
+				392A9730138B988400B51923 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +399,9 @@
 				39449116138B92480038653A /* ASIInputStream.m in Sources */,
 				39449117138B92480038653A /* ASINetworkQueue.m in Sources */,
 				3944911A138B92530038653A /* Reachability.m in Sources */,
+				39449128138B94370038653A /* LFMTableViewController.m in Sources */,
+				3944920F138B96B60038653A /* LFMEventsRequest.m in Sources */,
+				392A972F138B988400B51923 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,13 +476,13 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Last/Last-Prefix.pch";
-				INFOPLIST_FILE = "Last/Last-Info.plist";
+				GCC_PREFIX_HEADER = "Last/LastFM-Prefix.pch";
+				INFOPLIST_FILE = "Last/LastFM-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = LastFM;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -444,13 +493,13 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Last/Last-Prefix.pch";
-				INFOPLIST_FILE = "Last/Last-Info.plist";
+				GCC_PREFIX_HEADER = "Last/LastFM-Prefix.pch";
+				INFOPLIST_FILE = "Last/LastFM-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = LastFM;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -459,7 +508,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		39449091138B90590038653A /* Build configuration list for PBXProject "Last" */ = {
+		39449091138B90590038653A /* Build configuration list for PBXProject "LastFM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				394490B0138B90590038653A /* Debug */,
@@ -468,13 +517,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		394490B2138B90590038653A /* Build configuration list for PBXNativeTarget "Last" */ = {
+		394490B2138B90590038653A /* Build configuration list for PBXNativeTarget "LastFM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				394490B3138B90590038653A /* Debug */,
 				394490B4138B90590038653A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

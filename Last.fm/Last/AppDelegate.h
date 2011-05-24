@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : NSObject <UIApplicationDelegate> {
+@class LFMTableViewController;
 
+@interface AppDelegate : NSObject <UIApplicationDelegate> {
+    LFMTableViewController *rootViewController_;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) LFMTableViewController *rootViewController;
 
 @end
