@@ -8,11 +8,13 @@
 
 #import "LFMTableViewController.h"
 #import "LFMEventsRequest.h"
+#import "LFMEvent.h"
 
 
 @implementation LFMTableViewController
 
 @synthesize request = request_;
+@synthesize events = events_;
 
 ////////////////////////////////////////////////////////////////////////
 #pragma mark -
@@ -25,6 +27,13 @@
     }
     
     return self;
+}
+
+- (void)dealloc {
+    MCRelease(request_);
+    MCRelease(events_);
+    
+    [super dealloc];
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -41,6 +50,17 @@
     [self.request startAsynchronous];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.request.delegate = self;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    self.request.delegate = nil;
+}
 
 ////////////////////////////////////////////////////////////////////////
 #pragma mark -
@@ -48,11 +68,12 @@
 ////////////////////////////////////////////////////////////////////////
 
 - (void)requestFinished:(ASIHTTPRequest *)request {
-    DDLogFunction();
+    self.events = [LFMEvent eventsFromDictionary:request.userInfo];
+    [self.tableView reloadData];
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request {
-    
+    DDLogError(@"Request failed: %@", request.error);
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -61,7 +82,7 @@
 ////////////////////////////////////////////////////////////////////////
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.events.count;
 }
 
 
@@ -69,18 +90,19 @@
 	static NSString *cellID = @"MTTableViewCellID";
     
 	UITableViewCell *cell = nil;
+    LFMEvent *event = [self.events objectAtIndex:indexPath.row];
     
 	// step 1: is there a dequeueable cell?
 	cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     
 	// step 2: no? -> create new cell
 	if (cell == nil) {
-		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID] autorelease];
+		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID] autorelease];
 	}
     
 	// step 3: set up cell values
-    
-    
+    cell.textLabel.text = event.title;
+    cell.detailTextLabel.text = [event.startDate description];
     
     return cell;
 }

@@ -24,7 +24,7 @@
 #pragma mark Last.FM API Calls
 ////////////////////////////////////////////////////////////////////////
 
-#define kLastFmGetEventsURL         [NSString stringWithFormat:@"%@%@",@"http://ws.audioscrobbler.com/2.0/?method=geo.getevents&format=json&location=vienna&api_key=",kLastFmAPIKey]
+#define kLastFmGetEventsURL         [NSString stringWithFormat:@"%@%@",@"http://ws.audioscrobbler.com/2.0/?method=geo.getevents&format=json&limit=100&location=vienna&api_key=",kLastFmAPIKey]
 
 ////////////////////////////////////////////////////////////////////////
 #pragma mark -

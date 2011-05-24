@@ -13,8 +13,10 @@
 
 @interface LFMTableViewController : UITableViewController <ASIHTTPRequestDelegate> {
     LFMEventsRequest *request_;
+    NSArray *events_;
 }
 
 @property (nonatomic, retain) LFMEventsRequest *request;
+@property (nonatomic, copy) NSArray *events;
 
 @end

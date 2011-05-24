@@ -30,8 +30,6 @@
 - (void)requestFinished {
     self.userInfo = XDICT([self.responseData objectFromJSONData], kLFMResponseDataKey);
     
-    MTLog(self.userInfo);
-    
 	[super requestFinished];
 }
 

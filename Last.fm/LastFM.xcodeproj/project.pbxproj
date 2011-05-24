@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		392A972F138B988400B51923 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 392A9716138B988300B51923 /* JSONKit.m */; };
 		392A9730138B988400B51923 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 392A9717138B988300B51923 /* README.md */; };
+		392A976C138B9B5200B51923 /* LFMEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 392A976B138B9B5200B51923 /* LFMEvent.m */; };
 		3944909C138B90590038653A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3944909B138B90590038653A /* UIKit.framework */; };
 		3944909E138B90590038653A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3944909D138B90590038653A /* Foundation.framework */; };
 		394490A0138B90590038653A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3944909F138B90590038653A /* CoreGraphics.framework */; };
@@ -83,6 +84,8 @@
 		392A9715138B988300B51923 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		392A9716138B988300B51923 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		392A9717138B988300B51923 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		392A976A138B9B5200B51923 /* LFMEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFMEvent.h; sourceTree = "<group>"; };
+		392A976B138B9B5200B51923 /* LFMEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFMEvent.m; sourceTree = "<group>"; };
 		39449097138B90590038653A /* LastFM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LastFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3944909B138B90590038653A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3944909D138B90590038653A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -160,6 +163,15 @@
 			path = ../JSONKit;
 			sourceTree = "<group>";
 		};
+		392A9769138B9B3F00B51923 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				392A976A138B9B5200B51923 /* LFMEvent.h */,
+				392A976B138B9B5200B51923 /* LFMEvent.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		3944908C138B90590038653A = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +211,7 @@
 		394490A1138B90590038653A /* Last */ = {
 			isa = PBXGroup;
 			children = (
+				392A9769138B9B3F00B51923 /* Model */,
 				3944920C138B96A40038653A /* Requests */,
 				39449125138B94190038653A /* View Controller */,
 				39449124138B93C90038653A /* PSDefines.h */,
@@ -402,6 +415,7 @@
 				39449128138B94370038653A /* LFMTableViewController.m in Sources */,
 				3944920F138B96B60038653A /* LFMEventsRequest.m in Sources */,
 				392A972F138B988400B51923 /* JSONKit.m in Sources */,
+				392A976C138B9B5200B51923 /* LFMEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
