@@ -60,6 +60,18 @@
     return [self.data objectForKey:@"image"];
 }
 
+- (NSString *)mediumImageURL {
+    NSArray *images = self.images;
+    
+    for (NSDictionary *imageDictionary in images) {
+        if ([[imageDictionary valueForKey:@"size"] isEqualToString:@"medium"]) {
+            return [imageDictionary valueForKey:@"#text"];
+        }
+    }
+    
+    return nil;
+}
+
 - (NSDate *)startDate {
     return [self.data objectForKey:@"startDate"];
 }

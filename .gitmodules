@@ -7,3 +7,6 @@
 [submodule "JSONKit"]
 	path = JSONKit
 	url = https://github.com/johnezang/JSONKit.git
+[submodule "SDWebImage"]
+	path = SDWebImage
+	url = https://github.com/rs/SDWebImage.git

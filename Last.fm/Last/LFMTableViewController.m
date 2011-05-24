@@ -9,7 +9,11 @@
 #import "LFMTableViewController.h"
 #import "LFMEventsRequest.h"
 #import "LFMEvent.h"
+#import "PSDefines.h"
+#import "LFMTableViewCell.h"
 
+
+#define kImageViewTag   1234
 
 @implementation LFMTableViewController
 
@@ -23,7 +27,7 @@
 
 - (id)initWithStyle:(UITableViewStyle)style {
     if ((self = [super initWithStyle:style])) {
-        self.title = @"Last.fm Sample";
+        self.title = @"Last.fm Events";
     }
     
     return self;
@@ -89,20 +93,25 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	static NSString *cellID = @"MTTableViewCellID";
     
-	UITableViewCell *cell = nil;
+	LFMTableViewCell *cell = nil;
     LFMEvent *event = [self.events objectAtIndex:indexPath.row];
     
 	// step 1: is there a dequeueable cell?
-	cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+	cell = (LFMTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellID];
     
 	// step 2: no? -> create new cell
 	if (cell == nil) {
-		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID] autorelease];
-	}
+		cell = [[[LFMTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID] autorelease];
+    }
     
 	// step 3: set up cell values
-    cell.textLabel.text = event.title;
+    
+    // set title
+    cell.mainTextLabel.text = event.title;
+    // set date
     cell.detailTextLabel.text = [event.startDate description];
+    // set image
+    [cell setImageURL:event.mediumImageURL];
     
     return cell;
 }

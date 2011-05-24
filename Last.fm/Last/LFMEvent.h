@@ -19,6 +19,7 @@
 
 @property (nonatomic, readonly) NSArray *artists;
 @property (nonatomic, readonly) NSArray *images;
+@property (nonatomic, readonly) NSString *mediumImageURL;
 @property (nonatomic, readonly) NSDate *startDate;
 @property (nonatomic, readonly) NSString *title;
 @property (nonatomic, readonly) NSDictionary *location;
