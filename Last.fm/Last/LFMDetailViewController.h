@@ -27,5 +27,6 @@
 
 @property (nonatomic, retain) LFMEvent *event;
 
+- (void)handleBackTap:(UITapGestureRecognizer *)gestureRecognizer;
 
 @end

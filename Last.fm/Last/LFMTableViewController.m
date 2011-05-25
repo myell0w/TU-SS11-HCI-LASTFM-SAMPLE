@@ -86,36 +86,9 @@
 #pragma mark UITableViewDataSource
 ////////////////////////////////////////////////////////////////////////
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.events.count;
-}
+// TODO: Sample-Code 
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	static NSString *cellID = @"MTTableViewCellID";
-    
-	LFMTableViewCell *cell = nil;
-    LFMEvent *event = [self.events objectAtIndex:indexPath.row];
-    
-	// step 1: is there a dequeueable cell?
-	cell = (LFMTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellID];
-    
-	// step 2: no? -> create new cell
-	if (cell == nil) {
-		cell = [[[LFMTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID] autorelease];
-    }
-    
-	// step 3: set up cell values
-    
-    // set title
-    cell.mainTextLabel.text = event.title;
-    // set date
-    cell.detailTextLabel.text = [event.startDate description];
-    // set image
-    [cell setImageURL:event.mediumImageURL];
-    
-    return cell;
-}
 
 ////////////////////////////////////////////////////////////////////////
 #pragma mark -
@@ -123,13 +96,9 @@
 ////////////////////////////////////////////////////////////////////////
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    LFMDetailViewController *detailViewController = [[[LFMDetailViewController alloc] initWithStyle:UITableViewStyleGrouped] autorelease];
+    // TODO: Sample-Code
     
-    detailViewController.event = [self.events objectAtIndex:indexPath.row];
-    //[self.navigationController pushViewController:detailViewController animated:YES];
     
-    detailViewController.modalTransitionStyle = UIModalTransitionStylePartialCurl;
-    [self presentModalViewController:detailViewController animated:YES];
 }
 
 @end

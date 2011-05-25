@@ -22,8 +22,11 @@
 	[[DDTTYLogger sharedInstance] setLogFormatter:psLogger];
 	[DDLog addLogger:[DDTTYLogger sharedInstance]];
     
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleBlackOpaque;
+    
     self.rootViewController = [[[LFMTableViewController alloc] initWithStyle:UITableViewStylePlain] autorelease];
     UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:self.rootViewController] autorelease];
+    navigationController.navigationBar.barStyle = UIBarStyleBlack;
     
     self.window.rootViewController = navigationController;
     

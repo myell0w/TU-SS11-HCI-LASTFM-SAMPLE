@@ -65,11 +65,12 @@
     NSURL *url = [NSURL URLWithString:imageURL];
     
     // synchronous:
-    //NSData *data = [NSData dataWithContentsOfURL:url];
-    //self.imageView.image = [UIImage imageWithData:data];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    self.imageView.image = [UIImage imageWithData:data];
     
-    // asynchronous:
-    [self.imageView setImageWithURL:url placeholderImage:[UIImage imageNamed:@"lastfm.png"]];
+    // TODO: asynchronous
+    
+    
 }
 
 @end

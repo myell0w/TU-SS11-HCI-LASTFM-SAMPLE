@@ -44,7 +44,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     self.titleLabel = [[[UILabel alloc] initWithFrame:CGRectMake(10, 10, 210, 20)] autorelease];
     self.startDateLabel = [[[UILabel alloc] initWithFrame:CGRectMake(10, 31, 210, 20)] autorelease];
     self.imageView = [[[UIImageView alloc] initWithFrame:CGRectMake(230, 10, 80, 80)] autorelease];
@@ -63,7 +62,9 @@
     self.tableView.tableFooterView = footerView;
     
     // customize appearance
-    self.tableView.backgroundColor = [UIColor blackColor];
+    UIImageView *backgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Background.png"]] autorelease];
+    self.tableView.backgroundView = backgroundView;
+    
     self.titleLabel.opaque = NO;
     self.titleLabel.backgroundColor = [UIColor clearColor];
     self.titleLabel.textColor = [UIColor whiteColor];
@@ -74,6 +75,8 @@
     self.startDateLabel.textColor = [UIColor whiteColor];
     self.startDateLabel.font = [UIFont systemFontOfSize:14];
     
+    self.imageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.imageView.clipsToBounds = YES;
     self.imageView.layer.cornerRadius = 4.f;
     self.imageView.layer.borderColor = [UIColor whiteColor].CGColor;
     self.imageView.layer.borderWidth = 2.f;
@@ -84,6 +87,9 @@
     
     self.mapView.showsUserLocation = YES;
     self.mapView.delegate = self;
+    
+    UITapGestureRecognizer *gestureRecognizer = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleBackTap:)] autorelease];
+    [self.view addGestureRecognizer:gestureRecognizer];
 }
 
 - (void) viewDidUnload {
@@ -108,14 +114,6 @@
     [self.mapView setRegion:MKCoordinateRegionMake(self.event.coordinate, MKCoordinateSpanMake(0.01, 0.01)) animated:YES];
     
     [self.tableView reloadData];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    [UIView animateWithDuration:0.5 animations:^{
-        self.tableView.contentInset = UIEdgeInsetsMake(55, 0, 0, 0);
-    }];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -217,6 +215,22 @@
     }
     
 	return annotationView;
+}
+
+
+////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark UIGestureRecognizer
+////////////////////////////////////////////////////////////////////////
+
+- (void)handleBackTap:(UITapGestureRecognizer *)gestureRecognizer {
+    if (gestureRecognizer.state == UIGestureRecognizerStateRecognized) {
+        CGPoint p = [gestureRecognizer locationInView:nil];
+        
+        if (p.y < 75 &&  self.tableView.contentInset.top != 0) {
+            [self dismissModalViewControllerAnimated:YES];
+        }
+    }
 }
 
 @end
